@@ -1,22 +1,12 @@
-JR'S LOCKSMITH V4 — REAL FORD STARTER CATALOG
+JR'S LOCKSMITH V5 PROFESSIONAL
+Upload to the root of your existing public GitHub repository:
+index.html, style.css, app.js, products.js, jrs-hero.jpeg and the entire images folder.
 
-UPLOAD THESE FIVE FILES TO THE ROOT OF YOUR EXISTING PUBLIC GITHUB REPOSITORY:
-- index.html
-- style.css
-- app.js
-- products.js
-- jrs-hero.jpeg
+DO NOT upload JR_INTERNAL_SUPPLIER_ORDER_SHEET.csv.
+It contains private supplier costs and supplier ordering links.
 
-DO NOT upload JR_INTERNAL_SUPPLIER_ORDER_SHEET.csv to the public repository.
-That file contains supplier ordering references and current supplier costs.
+V5 adds a polished ecommerce layout, category navigation, 13 verified starter products across Ford, GM, Honda, Toyota, Nissan and Chrysler/Dodge, responsive mobile shopping, vehicle search, cart, services and pro-equipment sections.
 
-V4 features:
-- 5 real Ford-family aftermarket products mapped to current supplier SKUs
-- Public retail pricing only
-- FCC ID, frequency, chip, blade, button and model data
-- Working vehicle-search/filter behavior
-- Cart and order-request flow
-- Existing JR's black/red branding
-- Cutting, programming, mobile service and pro-equipment sections
+Live card payment and form processing are NOT enabled yet.
 
-Supplier prices are snapshots and should be rechecked before fulfillment.
+V5.1 adds a dedicated Key Code Cutting section: customers can send their key code, have the compatible key cut by code, and receive it shipped ready for programming.

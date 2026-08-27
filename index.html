@@ -1,33 +1,71 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JR's Locksmith LLC | Automotive Keys, Programming & Interlock</title>
-<meta name="description" content="Shop vehicle-specific automotive keys and remotes, key cutting, programming and mobile locksmith service in Minnesota.">
+<title>JR's Locksmith LLC | Automotive Keys & Programming</title><meta name="description" content="Shop automotive keys, fobs, cutting and programming services from JR's Locksmith LLC. Mobile service across Minnesota.">
 <link rel="stylesheet" href="style.css"></head><body>
-<div class="top">24/7 MOBILE SERVICE • PROUDLY SERVING MINNESOTA</div>
-<header><a class="logo" href="#">JR'S <span>LOCKSMITH</span><small> LLC</small></a><nav><a href="#shop">SHOP KEYS</a><a href="#finder">FIND MY KEY</a><a href="#services">SERVICES</a><a href="#pro">PRO EQUIPMENT</a></nav><button onclick="toggleCart()">CART <b id="count">0</b></button></header>
+<div class="utility"><span>☎ (952) 228-4566</span><span>🚐 MOBILE SERVICE ALL OVER MINNESOTA</span><span class="hide-mobile">SECURE ONLINE ORDERING COMING SOON</span></div>
+<header class="header"><a class="brand" href="#"><span>JR'S</span><b>LOCKSMITH</b><small>LLC</small></a>
+<div class="searchbar"><input id="globalSearch" placeholder="Search keys by make, model, year or FCC ID..."><button onclick="globalSearch()">⌕</button></div>
+<nav><a href="#shop">SHOP KEYS</a><a href="#finder">FIND MY KEY</a><a href="#services">SERVICES</a><a href="#pro">EQUIPMENT</a></nav><button class="cartbtn" onclick="toggleCart()">CART <b id="count">0</b></button></header>
 
-<section class="hero"><img src="jrs-hero.jpeg" alt="JR's Locksmith automotive key and ignition interlock service"><div class="heroFade"></div><div class="heroCopy"><p>JR'S LOCKSMITH LLC</p><h1>AUTOMOTIVE KEYS.<br><span>CUT. PROGRAM. GO.</span></h1><div><a href="#finder">FIND MY KEY</a><a class="outline" href="#services">BOOK SERVICE</a></div></div></section>
+<section class="hero"><img src="jrs-hero.jpeg"><div class="shade"></div><div class="heroCopy"><span class="redline"></span><h1>AUTOMOTIVE KEYS.<br><em>CUT. PROGRAM. GO.</em></h1><p>Exact keys. Professional quality. Delivered by JR's.</p><div><a href="#finder">FIND MY KEY</a><a class="outline" href="#services">BOOK MOBILE SERVICE</a></div></div></section>
 
-<section id="finder" class="finder">
-<div><small>VEHICLE KEY FINDER</small><h2>Find the exact key for your vehicle.</h2><p>Search by year, make and model. Always compare your original key/FCC ID before ordering.</p></div>
-<form onsubmit="findKey(event)"><select id="year" required><option value="">YEAR</option></select><select id="make" required><option value="">MAKE</option><option>FORD</option><option>LINCOLN</option><option>MERCURY</option></select><input id="model" placeholder="MODEL" required><button>SEARCH KEYS</button></form>
-<div id="found" class="found"></div>
+<section class="trust"><div><b>🚚 FAST FULFILLMENT</b><span>Supplier-backed inventory</span></div><div><b>🎯 EXACT FITMENT</b><span>FCC ID, chip & key-code verification</span></div><div><b>🔒 SECURE CHECKOUT</b><span>Payments added before launch</span></div><div><b>🚐 MOBILE SERVICE</b><span>Serving Minnesota</span></div></section>
+
+<section class="categories"><h2>SHOP BY CATEGORY</h2><div class="catgrid">
+<a href="#shop" onclick="filterBrand('')"><strong>🔑</strong><b>AUTOMOTIVE KEYS</b><span>Shop all keys</span></a>
+<a href="#shop" onclick="filterBrand('Ford')"><strong>F</strong><b>FORD / LINCOLN</b><span>Remote & flip keys</span></a>
+<a href="#shop" onclick="filterBrand('Toyota')"><strong>T</strong><b>TOYOTA / SCION</b><span>Remote head keys</span></a>
+<a href="#shop" onclick="filterBrand('Honda')"><strong>H</strong><b>HONDA / ACURA</b><span>Remote head keys</span></a>
+<a href="#shop" onclick="filterBrand('Chevrolet')"><strong>GM</strong><b>CHEVY / GMC</b><span>Flip keys</span></a>
+<a href="#shop" onclick="filterBrand('Chrysler')"><strong>C</strong><b>CHRYSLER / DODGE</b><span>FOBIK keys</span></a>
+</div></section>
+
+<section id="finder" class="finder"><div><small>VEHICLE KEY FINDER</small><h2>Find the exact key for your vehicle</h2><p>Search by vehicle first. Then verify the FCC ID, chip, frequency and blade before ordering.</p></div><form onsubmit="findKey(event)"><select id="year" required><option value="">SELECT YEAR</option></select><select id="make" required><option value="">SELECT MAKE</option><option>FORD</option><option>LINCOLN</option><option>MERCURY</option><option>CHEVROLET</option><option>GMC</option><option>BUICK</option><option>HONDA</option><option>ACURA</option><option>TOYOTA</option><option>SCION</option><option>NISSAN</option><option>CHRYSLER</option><option>DODGE</option></select><input id="model" placeholder="SELECT / TYPE MODEL" required><button>FIND MY KEY</button></form><div id="found"></div></section>
+
+<section id="shop" class="shop"><div class="sectionhead"><div><small>FEATURED KEYS</small><h2>Shop replacement keys & remotes</h2></div><button class="viewall" onclick="filterBrand('')">VIEW ALL KEYS →</button></div><div id="productGrid" class="productgrid"></div></section>
+
+
+<section class="keycode-service" id="keycode">
+  <div class="keycode-copy">
+    <small>KEY CODE CUTTING</small>
+    <h2>Send us your key code — we’ll cut the key and ship it ready to program.</h2>
+    <p>
+      Already have the correct key code? Send it to JR’s Locksmith with your vehicle details.
+      We can cut a compatible key by code and ship it back to you so it arrives ready for programming.
+    </p>
+    <div class="keycode-points">
+      <span>✓ Send your key code</span>
+      <span>✓ We verify the key type</span>
+      <span>✓ Precision cut by code</span>
+      <span>✓ Shipped ready to program</span>
+    </div>
+    <p class="keycode-note">
+      Key code and vehicle information must match the key being ordered. Programming is not included unless selected separately.
+    </p>
+  </div>
+  <div class="keycode-card">
+    <b>HOW IT WORKS</b>
+    <ol>
+      <li>Choose the correct key or request help matching it.</li>
+      <li>Send us your vehicle information and key code.</li>
+      <li>JR’s Locksmith cuts the key to code.</li>
+      <li>We ship the cut key to you ready for programming.</li>
+    </ol>
+    <a href="#order">SEND KEY CODE / ORDER KEY</a>
+  </div>
 </section>
 
-<section id="shop" class="section">
-<div class="head"><div><small>LIVE STARTER CATALOG</small><h2>Ford-family keys ready for JR's pricing</h2></div><p>Exact FCC ID • frequency • chip • blade • fitment</p></div>
-<div id="productGrid" class="grid"></div>
-</section>
+<section id="services" class="services"><div class="sectionhead light"><div><small>JR'S SERVICES</small><h2>Need more than the key?</h2></div></div><div class="servicegrid">
+<article><b>KEY CUTTING</b><strong>$25+</strong><p>Standard and high-security automotive key cutting.</p></article>
+<article><b>PROGRAMMING</b><strong>$75+</strong><p>Transponder, remote-head and smart-key programming.</p></article>
+<article class="hot"><b>CUT + PROGRAM</b><strong>$100+</strong><p>Complete local service with verified fitment.</p></article>
+<article><b>MOBILE SERVICE</b><strong>QUOTE</strong><p>We come to you anywhere in our Minnesota service area.</p></article></div></section>
 
-<section id="services" class="services section"><small>AUTOMOTIVE LOCKSMITH SERVICES</small><h2>Add professional service to your key order.</h2>
-<div class="servicegrid"><article><b>01</b><h3>KEY CUTTING</h3><p>Standard and high-security automotive key cutting.</p><strong>$25+</strong></article><article><b>02</b><h3>KEY PROGRAMMING</h3><p>Transponder, remote-head and smart-key programming.</p><strong>$75+</strong></article><article><b>03</b><h3>CUT + PROGRAM</h3><p>Complete local key service with verified vehicle fitment.</p><strong>$100+</strong></article><article><b>04</b><h3>MOBILE SERVICE</h3><p>On-site service priced by distance and vehicle.</p><strong>QUOTE</strong></article></div></section>
+<section id="pro" class="pro"><div><small>JR'S PRO</small><h2>Professional locksmith equipment</h2><p>Programming machines, cutters, adapters and accessories will be added as distributor accounts are approved.</p></div><div class="progrid"><article><b>IM</b><span>KEY PROGRAMMERS</span></article><article><b>CUT</b><span>KEY CUTTING MACHINES</span></article><article><b>ACC</b><span>ADAPTERS & TOOLS</span></article></div></section>
 
-<section class="fitment"><div><small>BEFORE YOU ORDER</small><h2>We verify the key — not just the vehicle.</h2></div><div class="checks"><span>FCC ID</span><span>PART NUMBER</span><span>FREQUENCY</span><span>CHIP</span><span>KEY BLADE</span><span>BUTTONS</span></div></section>
+<section class="guarantees"><div><b>✓ FITMENT CHECK</b><span>Verify FCC ID before fulfillment</span></div><div><b>📍 MOBILE SERVICE</b><span>All over Minnesota</span></div><div><b>💬 EXPERT HELP</b><span>Automotive locksmith support</span></div><div><b>🔐 PAYMENT SECURITY</b><span>Protected checkout before launch</span></div></section>
 
-<section id="pro" class="section pro"><small>JR'S PRO</small><h2>Professional locksmith equipment</h2><p>Programming machines, cutters, adapters and accessories will be added as authorized distributor accounts are approved.</p><div class="progrid"><article><b>IM</b><h3>KEY PROGRAMMERS</h3><button disabled>COMING SOON</button></article><article><b>CUT</b><h3>KEY CUTTING MACHINES</h3><button disabled>COMING SOON</button></article><article><b>ACC</b><h3>ADAPTERS & TOOLS</h3><button disabled>COMING SOON</button></article></div></section>
+<section id="order" class="order"><div><small>ORDER / SERVICE REQUEST</small><h2>Tell us what you drive</h2><p>Complete the vehicle details so JR's can verify the exact key before fulfillment.</p></div><form onsubmit="requestOrder(event)"><input placeholder="NAME" required><input placeholder="PHONE / EMAIL" required><input id="vehicleField" placeholder="YEAR / MAKE / MODEL" required><input id="fccField" placeholder="FCC ID (IF KNOWN)"><select><option>KEY ONLY</option><option>KEY CUT BY CODE + SHIPPED READY TO PROGRAM</option><option>KEY + CUTTING</option><option>KEY + PROGRAMMING</option><option>KEY + CUT + PROGRAM</option><option>MOBILE SERVICE</option></select><textarea id="orderNotes" placeholder="KEY CODE / KEY SKU / VIN LAST 8 / LOCATION / DETAILS"></textarea><button>CONTINUE ORDER</button></form><p id="sent"></p></section>
 
-<section id="order" class="quote"><div><small>ORDER / SERVICE REQUEST</small><h2>Ready to order?</h2><p>Complete your vehicle information. Online payment will be connected before the store begins accepting live paid orders.</p></div><form onsubmit="requestOrder(event)"><input id="customerName" placeholder="NAME" required><input placeholder="PHONE / EMAIL" required><input id="vehicleField" placeholder="YEAR / MAKE / MODEL" required><input id="fccField" placeholder="FCC ID (IF KNOWN)"><select id="serviceSelect"><option>KEY ONLY</option><option>KEY + CUTTING</option><option>KEY + PROGRAMMING</option><option>KEY + CUT + PROGRAM</option><option>MOBILE SERVICE</option></select><textarea id="orderNotes" placeholder="KEY / SKU / VIN LAST 8 / LOCATION / DETAILS"></textarea><button>CONTINUE ORDER</button></form><p id="sent"></p></section>
-
-<footer><b>JR'S LOCKSMITH LLC</b><span>AUTOMOTIVE LOCKSMITH & IGNITION INTERLOCK SPECIALISTS</span><small>Minnesota mobile service • Verify product fitment before fulfillment.</small></footer>
-
-<aside id="cart"><button class="x" onclick="toggleCart()">×</button><small>YOUR CART</small><h2>ORDER SUMMARY</h2><div id="items"></div><div class="total">SUBTOTAL <b>$<span id="total">0.00</span></b></div><button class="checkout" onclick="checkout()">CONTINUE TO ORDER</button><p>Shipping, tax, and payment processing will be added before live checkout.</p></aside>
+<footer><strong>JR'S LOCKSMITH LLC</strong><span>AUTOMOTIVE LOCKSMITH & IGNITION INTERLOCK SPECIALISTS</span><small>Product fitment must be verified before fulfillment.</small></footer>
+<aside id="cart"><button class="x" onclick="toggleCart()">×</button><small>YOUR CART</small><h2>ORDER SUMMARY</h2><div id="items"></div><div class="total">SUBTOTAL <b>$<span id="total">0.00</span></b></div><button class="checkout" onclick="checkout()">CONTINUE TO ORDER</button><p>Live payment processing is not enabled yet.</p></aside>
 <script src="products.js"></script><script src="app.js"></script></body></html>
