@@ -1,0 +1,1 @@
+JR's Locksmith Website V1. Open index.html to preview. Before launch: connect Shopify/checkout, add exact vehicle fitment, real inventory, policies, final logo/contact details, and authorized equipment distributor products.
