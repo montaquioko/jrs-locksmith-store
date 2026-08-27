@@ -1,1 +1,1 @@
-JR's Locksmith Website V1. Open index.html to preview. Before launch: connect Shopify/checkout, add exact vehicle fitment, real inventory, policies, final logo/contact details, and authorized equipment distributor products.
+JR's Locksmith V3 — branded redesign using the supplied JR's artwork. Upload index.html, style.css, app.js, and jrs-hero.jpeg to the root of the existing GitHub repository. Replace existing files when prompted. GitHub Pages will update automatically.

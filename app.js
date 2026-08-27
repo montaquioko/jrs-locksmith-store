@@ -1,0 +1,5 @@
+let c=[];for(let y=new Date().getFullYear()+1;y>=1995;y--)document.querySelector('#year').insertAdjacentHTML('beforeend',`<option>${y}</option>`);
+function add(n,p){c.push({n,p});render();document.querySelector('#cart').classList.add('open')}function cart(){document.querySelector('#cart').classList.toggle('open')}
+function render(){count.textContent=c.length;items.innerHTML=c.length?c.map((x,i)=>`<div class="line"><span>${x.n}<br><b>$${x.p.toFixed(2)}</b></span><button onclick="c.splice(${i},1);render()">×</button></div>`).join(''):'<p>Your cart is empty.</p>';total.textContent=c.reduce((a,x)=>a+x.p,0).toFixed(2)}
+function findKey(e){e.preventDefault();found.textContent=`We'll match your ${year.value} ${make.value} ${model.value} by exact FCC ID / part number before fulfillment.`;document.querySelector('#keys').scrollIntoView()}
+function request(e){e.preventDefault();sent.textContent='Request form design is ready. A form service must be connected before customer submissions go live.';e.target.reset()}render();
